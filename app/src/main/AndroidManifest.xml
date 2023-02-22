@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shizq.bika">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--Android 13版本适配，细化存储权限-->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="s">
+
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.account.AccountActivity"/>
+        <activity
+            android:name=".ui.main.MainActivity">
+        </activity>
+        <activity
+            android:name=".ui.history.HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.notifications.NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mycomments.MyCommentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.comiclist.ComicListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.leaderboard.LeaderboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.collections.CollectionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.comment.CommentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.comicinfo.ComicInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reader.ReaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.games.GamesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.games.GameInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.apps.AppsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chat2.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chatroom.ChatRoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chatblacklist.ChatBlacklistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.image.ImageActivity"
+            android:exported="false" />
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+    </queries>
+
+</manifest>
